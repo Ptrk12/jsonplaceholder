@@ -1,7 +1,28 @@
-
-.userList{
+.userList {
   display: flex;
   margin: 5px;
-  justify-content: space-between;
-  width: 400px;
+  border-bottom: 1px solid #aaa;
+}
+
+.userName {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.userMail {
+  margin-left: 20px;
+  margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons button {
+  margin-bottom: 5px;
 }

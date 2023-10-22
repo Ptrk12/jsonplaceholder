@@ -1,5 +1,5 @@
 import React from 'react'
-import UserProps from './UserProps';
+import UserProps from './Types/UserProps';
 import './styles/user.css'
 
 
@@ -12,12 +12,18 @@ const User = ({ id, name, email,onDelete }: UserProps) => {
 
   return (
    <div className='userList'>
-    <span>{name}</span>
-    <span>{email}</span>
+    <div className='userName'>
+      <span>{name}</span>
+    </div>
+    <div className='userMail'>
+      <span>{email}</span>
+    </div>
+    <div className='buttons'>
     <span>
-      <button>edit</button>
-      <button onClick={handleDelete}>delete</button>
+      <button className='editButton'>edit</button>
+      <button className='deleteButton' onClick={handleDelete}>delete</button>
     </span>
+    </div>
   </div>
   );
 };

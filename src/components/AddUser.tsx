@@ -1,5 +1,5 @@
 import React from 'react'
-import AddUserProps from './AddUserProps'
+import AddUserProps from './Types/AddUserProps'
 import './styles/addUser.css'
 
 const AddUser:React.FC<AddUserProps> = ({onAdd}) => {

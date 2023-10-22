@@ -2,6 +2,45 @@
 
 body{
   font-family: 'Sometype Mono';
+  background-color: rgba(241, 155, 156, 1);
+  background-image: linear-gradient(191deg, rgba(241, 155, 156, 1) 0%, rgba(41, 53, 86, 1) 100%);
+}
+
+button{
+  border-radius: 10px;
+  width: 50px;
+  margin: 5px;
+  padding: 3px;
+  border: none;
+}
+
+.deleteButton{
+  background-color: rgb(220, 56, 56);
+  color: rgb(232, 201, 201);
+}
+
+.deleteButton:hover{
+  background-color: rgb(201, 114, 114);
+}
+
+
+.editButton{
+  background-color: rgb(179, 186, 150);
+  transition-duration: 0.7;
+}
+
+.editButton:hover{
+  background-color: rgb(209, 215, 172);
+}
+
+.addUserButton{
+  background-color: rgb(159, 192, 159);
+  width: 120px;
+  height: 40px;
+}
+
+.addUserButton:hover{
+  background-color: rgb(164, 234, 164);
 }
 
 *{
@@ -18,6 +57,3 @@ body{
   margin-top: 40px;
 }
 
-.test{
-  
-}
