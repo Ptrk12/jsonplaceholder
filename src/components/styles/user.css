@@ -1,0 +1,7 @@
+
+.userList{
+  display: flex;
+  margin: 5px;
+  justify-content: space-between;
+  width: 400px;
+}
