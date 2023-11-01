@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react'
-import UserProps from './Types/UserProps';
-import AddUser from './AddUser';
-import Popup from './Popup';
+import UserProps from '../../components/Types/UserProps';
+import AddUser from '../../components/AddUser';
+import Popup from '../../components/Popup';
 import User from './User';
-import './styles/userPage.css'
+import './userPage.css'
 
 const UserPage = () => {
 
   const[users, setUsers] = useState<UserProps[]>([]);
-  const[posts, setPosts] = useState([]);
   
   const [isPopupVisible, setPopupVisible] = useState(false);
 

@@ -1,6 +1,6 @@
 import React from 'react'
-import UserProps from './Types/UserProps';
-import './styles/user.css'
+import UserProps from '../../components/Types/UserProps';
+import './userPage.css'
 
 
 

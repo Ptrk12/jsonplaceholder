@@ -1,3 +1,11 @@
+.userPage{
+  height: 90%;
+  padding: 30px;
+  -webkit-box-shadow: -2px 24px 65px 9px rgba(66, 68, 90, 1);
+  -moz-box-shadow: -2px 24px 65px 9px rgba(66, 68, 90, 1);
+  box-shadow: -2px 24px 65px 9px rgba(66, 68, 90, 1);
+}
+
 .userList {
   display: flex;
   margin: 5px;

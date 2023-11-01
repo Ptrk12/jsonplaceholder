@@ -1,10 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import User from './components/User';
-import UserProps from './components/Types/UserProps';
+
+import { Outlet } from 'react-router';
 import './components/styles/app.css'
-import AddUser from './components/AddUser';
-import Popup from './components/Popup';
-import UserPage from './components/UserPage';
+import HomePage from './Pages/HomePage/HomePage';
 
 
 
@@ -12,7 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      <UserPage />
+      <Outlet />
     </div>
   );
 }
