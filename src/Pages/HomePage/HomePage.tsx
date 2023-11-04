@@ -5,11 +5,15 @@ import Post from './Post';
 import './homePage.css';
 import { Link } from 'react-router-dom';
 import CommentsPage from '../CommentsPage/CommentsPage';
+import Pagination from '../../components/Pagination';
 
 interface Props {}
 
 const HomePage = (props: Props) => {
   const [posts, setPosts] = useState<PostProps[]>([]);
+
+const[currentPage, setCurrentPage] = useState<number>(1)
+const postsPerPage = 6;
   
   useEffect(() => {
     fetchData();
@@ -24,7 +28,9 @@ const HomePage = (props: Props) => {
       });
   }
 
-
+  const startIndex = (currentPage - 1) * postsPerPage;
+  const endIndex = startIndex + postsPerPage;
+  const currentPosts = posts.slice(startIndex, endIndex);
 
   return (
     <div>
@@ -32,12 +38,18 @@ const HomePage = (props: Props) => {
         <Link to='users'>USERS</Link>
       </button>
       <div className='postList'>
-        {posts.map((post) => (
+        {currentPosts.map((post) => (
           <div key={post.id}>
             <Post id={post.id} body={post.body} title={post.title} userId={post.userId} />
           </div>
         ))}
       </div>
+      <Pagination
+        currentPage={currentPage}
+        total={posts.length}
+        limit={postsPerPage}
+        onPageChange={(page: number) => setCurrentPage(page)}
+      />
     </div>
   );
 }
