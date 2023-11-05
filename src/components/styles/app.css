@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Sometype+Mono:ital@1&display=swap');
 
+.app{
+  margin: 0;
+  padding: 0;
+}
+
 body{
   font-family: 'Sometype Mono';
-  background-color: rgba(241, 155, 156, 1);
-  background-image: linear-gradient(191deg, rgba(241, 155, 156, 1) 0%, rgba(41, 53, 86, 1) 100%);
+  background-color: rgb(242, 240, 240);
 }
 
 button{

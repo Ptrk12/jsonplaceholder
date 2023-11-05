@@ -4,6 +4,7 @@ import CommentsPage from '../CommentsPage/CommentsPage';
 import './post.css'
 import { useState } from 'react';
 
+
 const Post = ({id,title,body,userId}:PostProps) => {
     
     const [selectedPostId, setSelectedPostId] = useState<number | null>(null);
@@ -21,13 +22,13 @@ const Post = ({id,title,body,userId}:PostProps) => {
                 <span>{body}</span>
             </div>
             <div className='postButtons'>
-                <span>
                     <button className='postEditButton'>Edit</button>
-                    <button className='postDeleteButton'>Delete</button>
-                    <Link to={`comments/${id}`}>
-                        <button className='commentButton' onClick={() => comment(id)}>Comments</button>
+                    <Link  to={"users"}>
+                        <i className="gg-trash"></i>
+                    </Link>             
+                    <Link  to={`comments/${id}`} onClick={() => comment(id)}>
+                        <i className="gg-comment"></i>
                     </Link>
-                </span>
             </div>
             {selectedPostId !== null && (
         <CommentsPage postId={selectedPostId} />

@@ -6,6 +6,7 @@ import './homePage.css';
 import { Link } from 'react-router-dom';
 import CommentsPage from '../CommentsPage/CommentsPage';
 import Pagination from '../../components/Pagination';
+import Header from '../Header/Header';
 
 interface Props {}
 
@@ -13,7 +14,7 @@ const HomePage = (props: Props) => {
   const [posts, setPosts] = useState<PostProps[]>([]);
 
 const[currentPage, setCurrentPage] = useState<number>(1)
-const postsPerPage = 6;
+const postsPerPage = 4;
   
   useEffect(() => {
     fetchData();
@@ -34,15 +35,16 @@ const postsPerPage = 6;
 
   return (
     <div>
-      <button>
-        <Link to='users'>USERS</Link>
-      </button>
+      <Header />
       <div className='postList'>
         {currentPosts.map((post) => (
           <div key={post.id}>
             <Post id={post.id} body={post.body} title={post.title} userId={post.userId} />
           </div>
         ))}
+      </div>
+      <div>
+        
       </div>
       <Pagination
         currentPage={currentPage}
