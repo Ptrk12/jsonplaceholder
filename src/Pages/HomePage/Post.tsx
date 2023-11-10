@@ -13,6 +13,11 @@ const Post = ({id,title,body,userId}:PostProps) => {
         setSelectedPostId(id);
       }
 
+      const details = (id: number) => {
+        setSelectedPostId(id);
+      }
+      console.log(selectedPostId)
+
     return(
         <div className='post'>
             <div className='postTitle'>
@@ -22,8 +27,10 @@ const Post = ({id,title,body,userId}:PostProps) => {
                 <span>{body}</span>
             </div>
             <div className='postButtons'>
-                    <button className='postEditButton'>Edit</button>
-                    <Link  to={"users"}>
+                    <Link to={`post/${id}`} onClick={()=>details(id)}>
+                        EDIT
+                    </Link> 
+                    <Link to={""}>
                         <i className="gg-trash"></i>
                     </Link>             
                     <Link  to={`comments/${id}`} onClick={() => comment(id)}>

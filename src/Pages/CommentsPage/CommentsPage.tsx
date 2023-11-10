@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import CommentProps from '../../components/Types/CommentProps';
-import { useParams } from 'react-router';
 
 
 

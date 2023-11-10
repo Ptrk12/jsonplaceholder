@@ -3,8 +3,6 @@ import PostProps from '../../components/Types/PostProps';
 import Post from './Post';
 
 import './homePage.css';
-import { Link } from 'react-router-dom';
-import CommentsPage from '../CommentsPage/CommentsPage';
 import Pagination from '../../components/Pagination';
 import Header from '../Header/Header';
 
@@ -28,6 +26,8 @@ const postsPerPage = 4;
         console.log(err);
       });
   }
+
+
 
   const startIndex = (currentPage - 1) * postsPerPage;
   const endIndex = startIndex + postsPerPage;

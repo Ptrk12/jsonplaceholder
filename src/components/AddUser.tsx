@@ -15,9 +15,8 @@ const AddUser:React.FC<AddUserProps> = ({onAdd}) => {
   }
 
   return (
-    <div className='container'>
-      <h3 className='header'>Add user</h3>
-      <form onSubmit={handleOnSubmit}>
+    <div>
+      <form className='form' onSubmit={handleOnSubmit}>
         <input placeholder='Name' name='name'/>
         <input placeholder='Email' name='email'/>
         <button type='submit'>Add</button>

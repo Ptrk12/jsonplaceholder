@@ -1,7 +1,7 @@
 .header{
     background: rgb(193,181,73);
     background: linear-gradient(40deg, rgba(193,181,73,0.9836135137648809) 0%, rgba(10,50,148,1) 0%, rgba(5,0,172,1) 66%, rgba(0,212,255,1) 100%); 
-    width: 100vw;
+    width: 99vw;
     height: 150px;
     display: flex;
     flex-direction: row;
@@ -11,6 +11,7 @@
     position: fixed;
     z-index: 99;
     top: 0;
+    border-radius: 12px;
 }
 
 .buttons{
@@ -19,6 +20,7 @@
 }
 
 .buttons button{
+    margin-left: 20px;
     width: 200px;
     height: 60px;
     cursor: pointer;
