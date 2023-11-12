@@ -5,9 +5,13 @@ import './post.css'
 import { useState } from 'react';
 
 
-const Post = ({id,title,body,userId}:PostProps) => {
+const Post = ({id,title,body,userId, onDelete}:PostProps) => {
     
     const [selectedPostId, setSelectedPostId] = useState<number | null>(null);
+
+    const handleOnDelete = () =>{
+        onDelete(id);
+    }
 
     const comment = (id: number) => {
         setSelectedPostId(id);
@@ -28,11 +32,11 @@ const Post = ({id,title,body,userId}:PostProps) => {
             </div>
             <div className='postButtons'>
                     <Link to={`post/${id}`} onClick={()=>details(id)}>
-                        EDIT
+                        <i className="gg-edit-markup"></i>
                     </Link> 
-                    <Link to={""}>
+                    <Link to={"#"} className='trshButton' onClick={handleOnDelete}>
                         <i className="gg-trash"></i>
-                    </Link>             
+                    </Link>            
                     <Link  to={`comments/${id}`} onClick={() => comment(id)}>
                         <i className="gg-comment"></i>
                     </Link>

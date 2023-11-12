@@ -6,3 +6,15 @@
     gap: 50px;
     margin-top: 200px;
 }
+
+.addPostButton{
+    background-color: rgb(139, 139, 235);
+    margin-right: 42px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.addPostButton:hover{
+    background-color: rgb(183, 183, 224);
+    color:rgb(92, 88, 88);
+}

@@ -65,6 +65,7 @@ export const router = createBrowserRouter([
     children: [
       { path: '', element: <HomePage /> },
       { path: 'users', element: <UserPage /> },
+      { path: 'post/:postId', element: <DynamicDetailsPost /> },
       { path: 'comments/:postId', element: <DynamicCommentsPage /> },
       { path: '/albums/:userId', element: <DynamicAlbumsPage /> },
       { path: '/albums/:albumId/photos', element: <DynamicPhotoPage /> }

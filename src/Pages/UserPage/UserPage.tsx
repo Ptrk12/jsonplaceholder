@@ -4,6 +4,7 @@ import AddUser from '../../components/AddUser';
 import Popup from '../../components/Popup';
 import User from './User';
 import './userPage.css'
+import Pagination from '../../components/Pagination';
 
 const UserPage = () => {
 
@@ -73,6 +74,12 @@ const UserPage = () => {
       })
   }
 
+  const[currentPage, setCurrentPage] = useState<number>(1)
+
+  const startIndex = (currentPage - 1) * 5;
+  const endIndex = startIndex + 5;
+  const currentUsers = users.slice(startIndex, endIndex);
+
   return (
     <div>
             <br />
@@ -84,10 +91,16 @@ const UserPage = () => {
       )}
       <div className='userPage'>
         {
-        users.map((user)=>
+        currentUsers.map((user)=>
         (<User id={user.id} key ={user.id} name = {user.name} email ={user.email} onDelete={onDelete}/>))
         }
       </div>
+      <Pagination
+        currentPage={currentPage}
+        total={users.length}
+        limit={5}
+        onPageChange={(page: number) => setCurrentPage(page)}
+      />
     </div>
   )
 }

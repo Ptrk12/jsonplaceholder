@@ -9,9 +9,12 @@ const AddUser:React.FC<AddUserProps> = ({onAdd}) => {
     const form = e.target as HTMLFormElement;
     const nameInput = form.elements.namedItem('name') as HTMLInputElement;
     const emailInput = form.elements.namedItem('email') as HTMLInputElement;
-    onAdd(nameInput.value,emailInput.value);
-    nameInput.value = "";
-    emailInput.value = "";
+    if(nameInput.value.length > 0 && emailInput.value.length > 0){
+      onAdd(nameInput.value,emailInput.value);
+      nameInput.value = "";
+      emailInput.value = "";
+    }
+
   }
 
   return (

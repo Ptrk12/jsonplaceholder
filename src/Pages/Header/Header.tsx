@@ -8,9 +8,6 @@ const Header = () => {
         <div className='buttons'>
             <Link to='users'><button>USERS</button></Link>
         </div>
-        <div className='buttons'>
-            <Link to='users'><button>USERS</button></Link>
-        </div>
     </div>
   )
 }

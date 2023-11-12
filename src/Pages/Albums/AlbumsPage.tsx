@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import AlbumProps from '../../components/Types/AlbumProps';
 import { Link } from 'react-router-dom';
+import './albumsPage.css'
 
 const AlbumsPage = ({ userId }: { userId: number }) => {
 
@@ -21,14 +22,18 @@ const AlbumsPage = ({ userId }: { userId: number }) => {
 
 
   return (
-    <div>
+    <div className='cont'>
+      <ul>
       {album.map((album) => (
-        <li key={album.id}>
+        <li className='list' key={album.id}>
           {album.title}
           {album.id}
-          <Link to={`/albums/${album.id}/photos`}>Photos</Link>
+          <Link to={`/albums/${album.id}/photos`}>
+            <i className="gg-photoscan"></i>
+          </Link>
         </li>
       ))}
+      </ul>
     </div>
   )
 }

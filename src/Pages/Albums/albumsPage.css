@@ -1,0 +1,31 @@
+
+.cont{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list{
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  margin-top: 50px;
+  display: block;
+  margin-left: -10px;
+}
+
+ul li {
+  display: block;
+  position: relative;
+}
+
+ul li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.gg-photoscan{
+  margin-left: 24px;
+}
+    
