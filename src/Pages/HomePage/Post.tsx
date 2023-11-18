@@ -20,7 +20,6 @@ const Post = ({id,title,body,userId, onDelete}:PostProps) => {
       const details = (id: number) => {
         setSelectedPostId(id);
       }
-      console.log(selectedPostId)
 
     return(
         <div className='post'>

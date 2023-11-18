@@ -70,3 +70,15 @@
   transform: rotate(-46deg);
   right: 2px
 }
+
+form input{
+  border: none;
+  outline: none;
+  height: 35px;
+  border-radius: 15px;
+}
+
+.submit{
+  width: 20 px;
+  height: 20px;
+}
