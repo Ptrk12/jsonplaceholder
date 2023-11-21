@@ -8,6 +8,7 @@ import { useParams } from 'react-router';
 import EditPost from '../Pages/HomePage/EditPost';
 import AlbumsPage from '../Pages/Albums/AlbumsPage';
 import PhotosPage from '../Pages/Albums/PhotosPage';
+import UserPost from '../Pages/UserPage/UserPost';
 
 const DynamicCommentsPage = () => {
   const { postId } = useParams(); 
@@ -58,6 +59,18 @@ const DynamicPhotoPage = () => {
 };
 
 
+const DynamicUserPostPage = () => {
+  const { userId } = useParams();
+
+  const userIdNumber = userId ? parseInt(userId, 10) : undefined;
+
+  if (typeof userIdNumber !== 'number' || isNaN(userIdNumber)) {
+    return <div>Error: Invalid userId</div>;
+  }
+
+  return <UserPost userId={userIdNumber} />;
+};
+
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -68,7 +81,8 @@ export const router = createBrowserRouter([
       { path: 'post/:postId', element: <DynamicDetailsPost /> },
       { path: 'comments/:postId', element: <DynamicCommentsPage /> },
       { path: '/albums/:userId', element: <DynamicAlbumsPage /> },
-      { path: '/albums/:albumId/photos', element: <DynamicPhotoPage /> }
+      { path: '/albums/:albumId/photos', element: <DynamicPhotoPage /> },
+      {path: '/posts/:userId', element: <DynamicUserPostPage />}
     ],
   },
 ]);

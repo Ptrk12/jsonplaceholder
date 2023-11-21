@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import CommentProps from '../../components/Types/CommentProps';
+import BackHome from '../HomePage/BackHome';
 
 
 
@@ -20,6 +21,7 @@ const CommentsPage = ({ postId }: { postId: number }) => {
 
   return (
     <div>
+      <BackHome/>
       <h3>Comments:</h3>
       <ul>
         {comments.map((comment) => (

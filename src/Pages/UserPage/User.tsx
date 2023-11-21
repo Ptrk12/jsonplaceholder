@@ -36,6 +36,9 @@ const User = ({ id, name, email, onDelete, onEdit }: UserProps) => {
         <Link to={`/albums/${id}`}>
           <i className='gg-album'></i>
         </Link>
+        <Link to={`/posts/${id}`}>
+          User posts
+        </Link>
       </div>
     </div>
   );

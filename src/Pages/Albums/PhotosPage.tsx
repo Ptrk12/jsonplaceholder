@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import PhotosProps from '../../components/Types/PhotosProps';
 import Pagination from '../../components/Pagination';
+import BackHome from '../HomePage/BackHome';
 
 const PhotosPage = ({ albumId }: { albumId: number }) => {
 
@@ -29,6 +30,7 @@ const PhotosPage = ({ albumId }: { albumId: number }) => {
 
   return (
     <div className='cont'>
+      <BackHome />
       <ul>
         {currentPhotos.map((photo) => (
         <li key={photo.id}>

@@ -5,6 +5,7 @@ import Popup from '../../components/Popup';
 import User from './User';
 import './userPage.css';
 import Pagination from '../../components/Pagination';
+import BackHome from '../HomePage/BackHome';
 
 const UserPage = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -152,6 +153,7 @@ const UserPage = () => {
   return (
     <div>
       <br />
+      <BackHome/>
       <button className="addUserButton" onClick={openPopup}>
         Add user
       </button>

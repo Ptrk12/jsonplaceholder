@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import AlbumProps from '../../components/Types/AlbumProps';
 import { Link } from 'react-router-dom';
 import './albumsPage.css'
+import BackHome from '../HomePage/BackHome';
 
 const AlbumsPage = ({ userId }: { userId: number }) => {
 
@@ -23,6 +24,7 @@ const AlbumsPage = ({ userId }: { userId: number }) => {
 
   return (
     <div className='cont'>
+      <BackHome/>
       <ul>
       {album.map((album) => (
         <li className='list' key={album.id}>
