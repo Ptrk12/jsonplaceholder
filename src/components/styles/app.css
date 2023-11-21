@@ -5,6 +5,15 @@
   padding: 0;
 }
 
+a{
+  text-decoration: none;
+}
+
+a, a:visited, a:focus, a:hover, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
 body{
   font-family: 'Sometype Mono';
   background-color: rgb(242, 240, 240);
